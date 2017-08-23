@@ -657,6 +657,12 @@ func convertVLabsMasterProfile(vlabs *vlabs.MasterProfile, api *MasterProfile) {
 		api.StorageProfile = ManagedDisks
 	}
 
+	if vlabs.PreprovisionExtension != nil {
+		apiExtension := &Extension{}
+		convertVLabsExtension(vlabs.PreprovisionExtension, apiExtension)
+		api.PreprovisionExtension = apiExtension
+	}
+
 	api.Extensions = []Extension{}
 	for _, extension := range vlabs.Extensions {
 		apiExtension := &Extension{}
@@ -745,6 +751,12 @@ func convertVLabsAgentPoolProfile(vlabs *vlabs.AgentPoolProfile, api *AgentPoolP
 	api.CustomNodeLabels = map[string]string{}
 	for k, v := range vlabs.CustomNodeLabels {
 		api.CustomNodeLabels[k] = v
+	}
+
+	if vlabs.PreprovisionExtension != nil {
+		apiExtension := &Extension{}
+		convertVLabsExtension(vlabs.PreprovisionExtension, apiExtension)
+		api.PreprovisionExtension = apiExtension
 	}
 
 	api.Extensions = []Extension{}

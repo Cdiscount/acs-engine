@@ -95,7 +95,7 @@ const (
 var KubeConfigs = map[string]map[string]string{
 	api.KubernetesRelease1Dot7: {
 		"hyperkube":       "hyperkube-amd64:v1.7.4",
-		"dashboard":       "kubernetes-dashboard-amd64:v1.6.1",
+		"dashboard":       "kubernetes-dashboard-amd64:v1.6.3",
 		"exechealthz":     "exechealthz-amd64:1.2",
 		"addonresizer":    "addon-resizer:1.7",
 		"heapster":        "heapster-amd64:v1.4.1",
@@ -118,7 +118,7 @@ var KubeConfigs = map[string]map[string]string{
 	},
 	api.KubernetesRelease1Dot6: {
 		"hyperkube":       "hyperkube-amd64:v1.6.6",
-		"dashboard":       "kubernetes-dashboard-amd64:v1.6.1",
+		"dashboard":       "kubernetes-dashboard-amd64:v1.6.3",
 		"exechealthz":     "exechealthz-amd64:1.2",
 		"addonresizer":    "addon-resizer:1.7",
 		"heapster":        "heapster-amd64:v1.3.0",
